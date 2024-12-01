@@ -9,28 +9,28 @@
 <body>
     <main>
         <div class="card card-1"><img src="./photos/1.png" alt="It is important you should watch this">
-            <h1> <em>The</em> <br> Algorithm</h1>
-            <p>The algorithem's working are Shrouded in complexity</p>
+            <h1 class="hadan"> <em>The</em> <br> Algorithm</h1>
+            <p class="param"> <span> The</span> <span>algorithem's</span> <span>working</span><span> are</span> <span>Shrouded</span> <span>in</span> <span>complexity</span></p>
         </div>
         <div class="card card-2"><img src="./photos/2.png" alt="It is important you should watch this">
-            <h1> <em>The</em> <br> Dogma</h1>
-            <p>Enshrining the principles of comfornity and reinforcing the status quo<p>
+            <h1 class="hadan"> <em >The</em> <br> Dogma</h1>
+            <p class="param">Enshrining the principles of comfornity and reinforcing the status quo<p>
         </div>
         <div class="card card-3"><img src="./photos/3.png" alt="It is important you should watch this">
-            <h1> <em>The</em> <br> Architects</h1>
-            <p>The elusive entities, laking Human form operate in the shadows</p>
+            <h1 class="hadan"> <em >The</em> <br> Architects</h1>
+            <p class="param">The elusive entities, laking Human form operate in the shadows</p>
         </div>
         <div class="card card-4"><img src="./photos/4.png" alt="It is important you should watch this">
-            <h1> <em>The</em> <br> Haldan</h1>
-            <p>Is your name Wi-Fi? Because I’m feeling a connection, but Im worried it might be too strong</p>
+            <h1 class="hadan"> <em >The</em> <br> Haldan</h1>
+            <p class="param">Is your name Wi-Fi? Because I’m feeling a connection, but Im worried it might be too strong</p>
         </div>
         <div class="card card-5"><img src="./photos/5.png" alt="It is important you should watch this">
-            <h1> <em>The</em> <br> Darts</h1>
-            <p>You must be a thief because you just stole my heart, and I’m pretty sure I’m gonna need a lawyer</p>
+            <h1 class="hadan"> <em >The</em> <br> Darts</h1>
+            <p class="param">You must be a thief because you just stole my heart, and I’m pretty sure I’m gonna need a lawyer</p>
         </div>
         <div class="card card-6"><img src="./photos/6.png" alt="It is important you should watch this">
-            <h1> <em>The</em> <br> Algorithm</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, suscipit!</p>
+            <h1 class="hadan"> <em >The</em> <br> Algorithm</h1>
+            <p class="param">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, suscipit!</p>
         </div>
             <div class="card-7">
 
@@ -59,6 +59,44 @@
                             }
                     })
            })
+
+
+           document.querySelectorAl l(".hadan").forEach(hadan => {        
+               gsap.from(hadan,{
+                 x:'200px',   
+                scale:0.7,
+                rotateY:'360deg',
+                opacity:0,         
+                scrollTrigger: {
+                            trigger: hadan,
+                            start: "top 65%",
+                            end: "bottom 15%",
+                            }
+               } ) })
+               document.querySelectorAll("span").forEach(div => {        
+    gsap.from(div, {
+        x: '200px',   
+        scale: 0.7,
+        rotateY: '360deg',
+        opacity: 0,
+        stagger:1,
+        duration:3
+    })
+}) 
+        //    document.querySelectorAll(".param").forEach(param => {        
+        //        gsap.from(param,{
+        //          x:'-200px',   
+        //         scale:0.7,
+        //         rotateY:'360deg',
+        //         opacity:0,         
+        //         scrollTrigger: {
+        //                     trigger: param,
+        //                     start: "top 65%",
+        //                     end: "bottom 15%",
+        //                     }
+        //        } ) })
+
+
                         </script>
 </body>
 </html>
